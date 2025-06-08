@@ -1,0 +1,446 @@
+/* General Styling & Variables */
+:root {
+    --dark-bg: #1A1A1A; /* Warna latar belakang gelap utama */
+    --card-bg: #2C2C2C; /* Warna latar belakang kartu */
+    --text-color: #FFFFFF; /* Warna teks utama */
+    --accent-color-1: #FF8C00; /* Oranye untuk aksen */
+    --accent-color-2: #8A2BE2; /* Ungu untuk aksen lain */
+    --light-grey: #BBBBBB; /* Abu-abu terang */
+    --border-radius-lg: 20px;
+    --border-radius-md: 12px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.2; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 2.2rem; }
+h4 { font-size: 1.5rem; }
+
+p { font-size: 1.1rem; }
+
+a {
+    color: var(--accent-color-1);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color-2);
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--accent-color-1);
+    color: var(--text-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--accent-color-2);
+}
+
+/* Header */
+header {
+    background-color: var(--dark-bg);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo i {
+    font-size: 2.5rem;
+    margin-right: 10px;
+    color: var(--accent-color-1);
+}
+
+/* Main Hero Section */
+#main-hero {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+#main-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.emoji {
+    font-size: 3rem; /* Sesuaikan ukuran emoji agar cocok dengan teks */
+}
+
+.main-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    max-width: 600px; /* Batasi lebar kartu utama */
+    margin-top: 40px;
+}
+
+.main-card-img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.main-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-card-info {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-card-info h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.check-menu-button {
+    background-color: var(--accent-color-2);
+    color: var(--text-color);
+    padding: 12px 25px;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.check-menu-button:hover {
+    background-color: var(--accent-color-1);
+}
+
+/* Menu Items Section */
+#menu-items, #full-menu {
+    padding: 60px 0;
+    background-color: var(--dark-bg);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.menu-header h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.arrow-button {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.arrow-button:hover {
+    background-color: var(--accent-color-1);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.menu-item-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.menu-item-card img {
+    width: 100%;
+    height: 200px; /* Tinggi gambar item */
+    object-fit: cover;
+    display: block;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.menu-item-card .item-info {
+    padding: 20px;
+    flex-grow: 1; /* Agar info mengisi sisa ruang */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item-card h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.menu-item-card p {
+    font-size: 0.95rem;
+    color: var(--light-grey);
+    margin-bottom: 15px;
+    flex-grow: 1; /* Dorong harga ke bawah */
+}
+
+.menu-item-card .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-color-1);
+}
+
+.view-all-menu {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Full Menu Section (Classic List Style) */
+#full-menu h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#full-menu .jam-buka {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--light-grey);
+}
+
+#full-menu .menu-category {
+    background-color: var(--card-bg);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#full-menu .menu-category h4 {
+    font-size: 1.8rem;
+    color: var(--accent-color-1);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#full-menu .menu-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#full-menu .menu-category li {
+    font-size: 1.15rem;
+    padding: 12px 0;
+    border-bottom: 1px dashed #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+
+#full-menu .menu-category li:last-child {
+    border-bottom: none;
+}
+
+#full-menu .menu-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--light-grey);
+    margin-top: 40px;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    background-color: #0F0F0F;
+    color: var(--light-grey);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color-1);
+}
+
+/* Fade-in Effect (tetap sama) */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.4rem; }
+    .emoji { font-size: 2.5rem; }
+    .main-card { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.8rem; }
+    .emoji { font-size: 2rem; }
+
+    #main-hero { padding: 60px 0; }
+
+    .main-card-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .check-menu-button {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .menu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .arrow-button {
+        align-self: flex-end; /* Pindahkan panah ke kanan bawah */
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .menu-item-card img {
+        height: 150px;
+    }
+    .menu-item-card h4 {
+        font-size: 1.1rem;
+    }
+    .menu-item-card p {
+        font-size: 0.85rem;
+    }
+    .menu-item-card .price {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.6rem; }
+    .emoji { font-size: 1.8rem; }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+    .logo i {
+        font-size: 2rem;
+    }
+
+    #main-hero { padding: 40px 0; }
+
+    .main-card-img {
+        height: 200px;
+    }
+    .main-card-info h3 {
+        font-size: 1.5rem;
+    }
+    .check-menu-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; /* Satu kolom di layar sangat kecil */
+    }
+    .menu-item-card img {
+        height: 180px; /* Biarkan sedikit lebih tinggi di satu kolom */
+    }
+}
